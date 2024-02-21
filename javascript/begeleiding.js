@@ -14,10 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
 let currentGroup = 1;
 
 function showBegeleiding(groep) {
-    // Verberg het begeleiding-container
     document.getElementById('begeleiding-container').style.display = 'none';
 
-    // Toon begeleiding alleen als een groep is geselecteerd
     if (groep >= 1 && groep <= 6) {
         // Zorg ervoor dat de foto's van de begeleiding per groep juist zijn opgeslagen
         // In de map Begeleiding
