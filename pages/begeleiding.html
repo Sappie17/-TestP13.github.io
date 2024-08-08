@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Begeleiding - Plus 13 Merksplas</title>
+    <title>Weekend - Plus 13 Merksplas</title>
     <link rel="stylesheet" href="../style/opmaak.css">
     <link rel="icon" href="../images/Logo_Zwart_Zonder_Achtergrond.jpg" type="image/x-icon">
     <link rel="shortcut icon" href="../images/Logo_Zwart_Zonder_Achtergrond.jpg" type="image/x-icon">
@@ -18,43 +18,11 @@
 
     <div id="hamburger-icon">&#9776;</div>
     <nav>
+        <!-- links naar andere pagina's -->
         <a href="../index.html">Home</a>
         <a href="inschrijven.html">Inschrijven</a>
-        <!-- 
-            als je kerst inschrijvingen wilt verzamelen
-            Kopieer deze lijn en zet onder pijltje
-            <a href="inschrijvenKerst.html">Kerstactiviteit</a> 
-            BIJ ELKE PAGINA!!
-            Verwijder het ook terug als het niet meer nodig is
-        -->
-        
-        <!-- 
-            als je weekend inschrijvingen wilt verzamelen
-            Verander het jaartal
-            Kopieer deze lijn en zet onder pijltje
-            <a href="inschrijvenWeekend.html">WKND '25</a> 
-            BIJ ELKE PAGINA!!
-            verander het jaartal!!!!
-            Verwijder het ook terug als het niet meer nodig is
-        -->
-        
-        <!-- 
-            als je weekend documenten wilt online zetten
-            Kopieer deze lijn en zet onder pijltje
-            <a href="weekendDocs.html">Documenten WKND '25</a> 
-            verander het jaartal!!!!
-            BIJ ELKE PAGINA!!
-            Verwijder het ook terug als het niet meer nodig is
-        -->
-                
-        <!-- 
-            als je slot inschrijvingen wilt verzamelen
-            Kopieer deze lijn en zet onder pijltje
-            <a href="inschrijvenSlot.html">Slotactiviteit</a>
-            BIJ ELKE PAGINA!!
-            Verwijder het ook terug als het niet meer nodig is
-        -->
-                
+        <a href="inschrijvenWeekend.html">WKND '25</a>
+        <a href="#documentenWKND">Documenten WKND '25</a>
         <a href="media.html">Media</a>
         <a href="begeleiding.html">Begeleiding</a>
         <a href="contact.html">Contact</a>
@@ -62,22 +30,42 @@
         <a href="https://www.instagram.com/plus13merksplas/" class="socials" target="_blank"><img src="../images/insta.jpg" alt=""></a>
     </nav>
 
-    <div id="begeleiding-container">
-        <p id="begeleiding-tekst">Begeleiding groep</p>
-        <img id="begeleiding-img" alt="Begeleiding groep" style="width: 80%; height: auto;">
-        <div id="nav-arrows">
-            <span id="prev-arrow" class="nav-arrow" onclick="showBegeleiding(currentGroup === 1 ? 6 : currentGroup - 1)">&#10094;</span>
-            <span id="next-arrow" class="nav-arrow" onclick="showBegeleiding(currentGroup === 6 ? 1 : currentGroup + 1)">&#10095;</span>
+    <section class="begeleiding-container">
+        <div class="begeleiding-box">
+            <h2>Begeleiding groep 1</h2>
+            <img src="../images/Begeleiding/GROEP1.jpg" alt="Groep 1" class="begeleiding-img">
         </div>
-    </div>
 
-    
+        <div class="begeleiding-box">
+            <h2>Begeleiding groep 2</h2>
+            <img src="../images/Begeleiding/GROEP2.jpg" alt="Groep 2" class="begeleiding-img">
+        </div>
+
+        <div class="begeleiding-box">
+            <h2>Begeleiding groep 3</h2>
+            <img src="../images/Begeleiding/GROEP3.jpg" alt="Groep 3" class="begeleiding-img">
+        </div>
+
+        <div class="begeleiding-box">
+            <h2>Begeleiding groep 4</h2>
+            <img src="../images/Begeleiding/GROEP4.jpg" alt="Groep 4" class="begeleiding-img">
+        </div>
+
+        <div class="begeleiding-box">
+            <h2>Begeleiding groep 5</h2>
+            <img src="../images/Begeleiding/GROEP5.jpg" alt="Groep 5" class="begeleiding-img">
+        </div>
+
+        <div class="begeleiding-box">
+            <h2>Begeleiding groep 6</h2>
+            <img src="../images/Begeleiding/GROEP6.jpg" alt="Groep 6" class="begeleiding-img">
+        </div>
+    </section>
 
     <footer>
         &copy; <span id="jaartal"></span> Plus13Merksplas
     </footer>
 
-    <script src="../javascript/begeleiding.js"></script>
     <script src="../javascript/dropDown.js"></script>
     <script src="../javascript/jaartal.js"></script>
 

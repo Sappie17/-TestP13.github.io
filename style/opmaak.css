@@ -4,6 +4,9 @@ body {
     padding: 0;
     background-color: lightblue;
     position: relative;
+    min-height: 100vh; /* Zorg ervoor dat de body ten minste de hoogte van het scherm heeft */
+    display: flex;
+    flex-direction: column; /* Zorg ervoor dat de footer aan de onderkant van de pagina blijft */
     overflow-x: hidden;
     box-sizing: border-box;
 }
@@ -18,7 +21,7 @@ header {
     z-index: 2;
 }
 
-h1{
+h1 {
     font-size: 50px;
 }
 
@@ -106,6 +109,7 @@ nav a:hover {
 
 section {
     padding: 20px;
+    flex: 1; /* Zorg ervoor dat de sectie de beschikbare ruimte opvult */
 }
 
 footer {
@@ -114,7 +118,7 @@ footer {
     text-align: center;
     padding: 1em;
     width: 100%;
-    position: absolute;
+    margin-top: auto; /* Zorg ervoor dat de footer naar beneden verschuift */
 }
 
 button {
@@ -171,24 +175,6 @@ iframe {
     margin: 0 auto;
 }
 
-#begeleiding-container {
-    display: none;
-    text-align: center;
-    margin-top: 20px;
-    position: relative;
-}
-
-#begeleiding-img {
-    max-width: 50%;
-    max-height: fit-content;
-}
-
-#begeleiding-tekst {
-    font-size: 30px;
-    text-align: center;
-    margin-top: 15px;
-}
-
 .contact-info {
     display: flex;
     justify-content: space-around;
@@ -238,6 +224,31 @@ iframe {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+}
+
+.begeleiding-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Ruimte tussen de items */
+    justify-content: center;
+    padding: 20px;
+}
+
+.begeleiding-box {
+    width: calc(50% - 20px); /* 50% breedte minus de gap ruimte */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px 0; /* Marge boven en onder de boxen */
+    overflow: hidden; /* Zorg ervoor dat de inhoud binnen de box blijft */
+}
+
+.begeleiding-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding de container vult zonder vervorming */
+    border-radius: 10px; /* Optioneel, maakt de hoeken van de afbeelding rond */
 }
 
 .midden {
@@ -294,17 +305,6 @@ iframe {
         padding: 10px;
     }
 
-    #begeleiding-container {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 20px;
-    }
-
-    #begeleiding-img {
-        width: 100%;
-        height: auto;
-    }
-
     h1 {
         font-size: 40px;
     }
@@ -348,9 +348,14 @@ iframe {
         align-items: center;
         margin-top: 20px;
     }
+
+    .begeleiding-box {
+        width: 100%; /* Zorg ervoor dat de boxen volledig breed zijn op kleine schermen */
+        box-sizing: border-box; /* Zorg ervoor dat padding en borders bij de breedte worden inbegrepen */
+    }
 }
 
-.maps{
+.maps {
     height: auto;
     width: auto;
 }
