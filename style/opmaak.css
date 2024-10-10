@@ -1,3 +1,8 @@
+/* Basisstijl */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,9 +13,9 @@ body {
     display: flex;
     flex-direction: column; /* Zorg ervoor dat de footer aan de onderkant van de pagina blijft */
     overflow-x: hidden;
-    box-sizing: border-box;
 }
 
+/* Header */
 header {
     height: auto;
     width: 100%;
@@ -30,38 +35,7 @@ h1 {
     width: auto;
 }
 
-#hamburger-icon {
-    background-color: #222C34;
-    width: 100%;
-    display: none;
-    cursor: pointer;
-}
-
-@media only screen and (max-width: 768px) {
-    #hamburger-icon {
-        display: block;
-        font-size: 24px;
-        padding: 14px;
-        color: white;
-    }
-
-    nav {
-        display: none;
-    }
-
-    nav.active {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav.active a {
-        display: block;
-        padding: 10px;
-        text-align: center;
-    }
-}
-
+/* Navigatie */
 nav {
     width: 100%;
     background-color: #222C34;
@@ -83,13 +57,42 @@ nav select {
     display: none;
 }
 
-* {
-    box-sizing: border-box;
+/* Hamburger Menu */
+#hamburger-icon {
+    background-color: #222C34;
+    width: 100%;
+    display: none;
+    cursor: pointer;
 }
 
+/* Media Queries voor Mobiele Weergave */
 @media only screen and (max-width: 768px) {
+    #hamburger-icon {
+        display: block;
+        font-size: 24px;
+        padding: 14px;
+        color: white;
+    }
+
+    nav {
+        align-items: center;
+        justify-content: space-between;
+    }
+
     nav a {
         display: none;
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.active a {
+        display: block;
+        padding: 10px;
+        text-align: center;
     }
 
     nav select {
@@ -100,18 +103,33 @@ nav select {
         border: none;
         cursor: pointer;
     }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    .pdf-box {
+        width: 80%;
+    }
 }
 
+/* Hover Effect voor Navigatie */
 nav a:hover {
     background-color: #ddd;
     color: black;
 }
 
+/* Sectie Stijl */
 section {
     padding: 20px;
     flex: 1; /* Zorg ervoor dat de sectie de beschikbare ruimte opvult */
 }
 
+/* Footer */
 footer {
     background-color: #222C34;
     color: white;
@@ -121,6 +139,49 @@ footer {
     margin-top: auto; /* Zorg ervoor dat de footer naar beneden verschuift */
 }
 
+/* Contactsectie */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ruimte tussen de kaders */
+    padding: 20px;
+}
+
+.contact-box {
+    width: calc(30% - 10px); /* Iets bredere kaders voor desktops */
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px; /* Aangepaste hoekradius */
+    text-align: center;
+    margin: 5px; /* Ruimte tussen de kaders */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries voor Contactsectie */
+@media only screen and (max-width: 768px) {
+    .contact-box {
+        width: calc(45% - 10px); 
+    }
+
+    iframe {
+        margin: auto;
+        display: block;
+        height: 1800px; /* Pas de hoogte aan voor kleinere schermen */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .contact-box {
+        width: 100%;        
+    }
+
+    iframe {
+        height: 1800px; /* Vaste hoogte voor mobiele schermen */
+        width: 100%; /* Zorg ervoor dat het iframe de volledige breedte gebruikt */
+    }
+}
+
+/* Button Stijl */
 button {
     width: 100%;
     max-width: 180px;
@@ -130,12 +191,22 @@ button {
     box-sizing: border-box;
 }
 
+/* Iframe Stijl */
 iframe {
     margin: auto;
     display: block;
-    height: 1200px;
+    width: 100%; /* Zorg ervoor dat het iframe de volledige breedte gebruikt */
+    height: 1800px; /* Vaste hoogte voor het iframe */
+    border: none; /* Verberg de rand als dat gewenst is */
 }
 
+.maps {
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+}
+
+/* Afbeeldingen */
 #image-container {
     display: flex;
     flex-wrap: wrap;
@@ -155,6 +226,7 @@ iframe {
     transition: transform 0.3s ease-in-out;
 }
 
+/* Lightbox Stijl */
 .lightbox-overlay {
     display: none;
     position: fixed;
@@ -175,18 +247,6 @@ iframe {
     margin: 0 auto;
 }
 
-.contact-info {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    margin-top: 20px;
-}
-
-.info-item {
-    text-align: center;
-    max-width: 300px;
-}
-
 .close-button {
     position: absolute;
     top: 10px;
@@ -201,6 +261,7 @@ iframe {
     color: #ccc;
 }
 
+/* Groepsfoto */
 .Groepsfoto {
     width: 100%;
     height: auto;
@@ -224,6 +285,34 @@ iframe {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+}
+
+.foto-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.foto-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Ruimte tussen de items */
+    justify-content: center;
+    padding: 20px;
+}
+
+.foto-box {
+    width: calc(50% - 20px); 
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px 0; 
+    overflow: hidden; 
 }
 
 .begeleiding-container {
@@ -255,6 +344,7 @@ iframe {
     text-align: center;
 }
 
+/* Navigatie Pijlen voor Lightbox */
 #lightbox-content {
     position: relative;
 }
@@ -286,6 +376,7 @@ iframe {
     margin-top: 10px;
 }
 
+/* Media Queries voor Responsiviteit */
 @media only screen and (max-width: 768px) {
     body {
         overflow-x: auto;
@@ -295,67 +386,7 @@ iframe {
         width: 100%;
     }
 
-    nav {
-        align-items: center;
-        width: 100%;
-        justify-content: space-between;
-    }
-
     nav a, nav select {
         padding: 10px;
     }
-
-    h1 {
-        font-size: 40px;
-    }
-
-    .image-container {
-        width: 100%;
-    }
-
-    .pdf-box {
-        width: 80%;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    body {
-        overflow-x: auto;
-    }
-
-    header, footer {
-        width: 100%;
-    }
-
-    nav {
-        display: flex;
-        align-items: center;
-        text-align: center;
-    }
-
-    nav select {
-        display: none;
-    }
-
-    iframe {
-        width: 100%;
-        height: 1400px;
-    }
-
-    .contact-info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-    .begeleiding-box {
-        width: 100%; /* Zorg ervoor dat de boxen volledig breed zijn op kleine schermen */
-        box-sizing: border-box; /* Zorg ervoor dat padding en borders bij de breedte worden inbegrepen */
-    }
-}
-
-.maps {
-    height: auto;
-    width: auto;
 }
